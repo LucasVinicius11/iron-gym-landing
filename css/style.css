@@ -1,0 +1,595 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;  
+}
+
+/* Estilos Gerais*/
+
+body{
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+h2.title{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+h2.title span{
+    color: #ff0000ce;
+}
+
+
+/* Estilos do header */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 4%;
+    background-color: #000000d0;
+}
+
+header .logo {
+    color: #ff0000ce;
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+header .logo-title {
+    color: #fff;
+}
+
+header > .interface{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+header a:hover{
+    color: #ff0000ce;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+/* Estilos hero */
+section.hero {
+    position: relative;
+    padding: 40px 4%;
+    background: url("../img/fundo.jpeg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Criando um overlay escuro */
+section.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Ajuste a opacidade para mais escuro (0.7, 0.8, etc.) */
+}
+
+/* Mantém o conteúdo acima do overlay */
+section.hero .interface {
+    position: relative;
+    z-index: 10;
+}
+
+
+section.hero .flex{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 250px;
+    justify-content: center;
+}
+
+.hero .txt-title-hero h1{
+    display: flex;
+    color: #fff;
+    font-size: 55px;
+    margin-bottom: -20px;
+}
+
+.hero .txt-title-hero h2{
+    color: #ff0000ce;
+    font-size: 55px;
+}
+
+.hero .txt-title-hero p{
+    font-size: 15px;
+    color: #fff;
+    text-align: justify;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    color: #fff;
+    font-size: 18px;
+    background-color: #ff0000ce;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-contato button:hover{
+    background-color: #a70202;
+}
+
+/* Estilos sobre */
+section.sobre{
+    padding: 60px 4%;
+    width: auto;
+    background-color: #000;
+}
+
+section.sobre .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.sobre .card-sobre{
+    background-color: #1f1c1c;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: .2s;
+}
+
+.sobre .card-sobre:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 7px #ffffffaf;
+}
+
+.sobre .card-sobre i{
+    color: #a70202;
+    font-size: 55px;
+    margin-bottom: 10px;
+    
+}
+
+.sobre .card-sobre h4{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sobre .card-sobre p{
+    color: #fff;
+}
+
+/* Estilos card-planos */
+
+section.planos {
+    padding: 100px 4%;
+    background-color: #1f1c1c;
+}
+
+section.planos .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.planos .card-planos{
+    background-color: #000;
+    padding: 60px;
+    margin-top: 30px;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.planos .card-planos:hover{
+    border: 1px solid #a70202;
+}
+
+.planos .card-planos h3{
+    color: #fff;
+    font-size: 25px;
+}
+
+.planos .card-planos h4{
+    color: #a70202 ;
+    font-size: 35px;
+}
+
+.planos .card-planos p{
+    color: #fff;
+    font-size: 16px;
+}
+
+.planos .card-planos p span{
+    color: #ff0000ce;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.planos .card-planos2{
+    position: relative;
+    background-color: #000;
+    padding: 70px;
+    margin-top: 30px;
+    border-radius: 10px;
+    transition: 0.1s;
+    border: 1px solid #a70202;
+}
+
+.planos .card-planos2 h3{
+    color: #fff;
+    font-size: 30px;
+}
+
+.planos .card-planos2 h4{
+    color: #a70202 ;
+    font-size: 40px;
+}
+
+.planos .card-planos2 p{
+    color: #fff;
+    font-size: 20px;
+}
+
+.planos .card-planos2 p span{
+    color: #ff0000ce;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff0000ce;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.planos .card-planos .btn-contato button,
+.planos .card-planos2 .btn-contato button {
+    width: 100%;
+}
+
+
+section.depoimentos {
+    padding: 100px 2%;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.depoimentos .slide {
+    padding: 40px 60px;
+    cursor: grab;
+}
+
+.depoimentos .slide:active{
+    cursor: grabbing;
+}
+
+.depoimentos .swiper-button-next,
+.depoimentos .swiper-button-prev {
+    color: #ff0000ce;  
+}
+
+.depoimentos .swiper-pagination {
+    bottom: 10px !important;
+}
+
+
+
+.depoimentos i {
+    font-size: 70px;
+    color: #ccc;
+}
+
+.depoimentos p.depoi-txt {
+    font-weight: 300;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+}
+
+.slide .person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slide .person i {
+    font-size: 40px;        
+    border: 2px solid #fff;
+    width: 50px;        
+    height: 50px;      
+    border-radius: 50%;  
+    display: flex;    
+    align-items: center;    
+    justify-content: center;
+}
+
+.slide .person p.nome-person {
+    font-size: 20px;
+    font-weight: 600;
+    color: #a70202;
+}
+
+.slide .person p.func-person{
+    font-size: 14px;
+}
+
+
+/* Estilos contato */
+
+section.contato{
+    padding: 80px 4%;
+    background-color: #1f1c1c;
+}
+
+section.contato .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;  /* Maior espaçamento entre os elementos */
+    flex-wrap: wrap; /* Permite adaptação em telas menores */
+}
+
+.contato .contato-information {
+    flex: 1; /* Ocupa metade da tela */
+    max-width: 40%; /* Define um tamanho máximo */
+}
+
+.contato .contato-information i {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: #ff0000ce;
+    margin: 22px 0;
+}
+
+.contato .contato-information i h6 {
+    color: #fff;
+    font-size: 16px
+}
+
+.formulario {
+    flex: 1; /* Ocupa metade da tela */
+    max-width: 55%; /* Define um tamanho máximo */
+}
+
+form {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #000;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+form textarea {
+    max-height: 200px;
+    resize: none;
+}
+
+form .btn-enviar {
+    text-align: center;
+}
+
+form .btn-enviar input[type="submit"] {
+    width: 100%;
+    background-color: #ff0000ce;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 20px 4%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .logo{
+    margin-top: 20px;
+    color: #ff0000ce;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+footer .logo-title {
+    color: #fff;
+}
+
+.title-copyrigth {
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+ 
+    
+.hero{
+   text-align: center;
+}
+.hero .txt-title-hero h1{
+    font-size: 30px;
+    margin-bottom: 3px;
+}
+
+.hero .txt-title-hero h2{
+    color: #ff0000ce;
+    font-size: 30px;
+    
+}
+
+.hero .txt-title-hero p{
+    font-size: 14px;
+}
+
+.hero .btn-contato button{
+    display: none;
+}
+
+    .contato .contato-information,
+    .formulario {
+        max-width: 100%;
+    }
+}
+
+/* Botão do menu mobile */
+.btn-menu-mobile {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+/* ---------- Menu Mobile: override e estilo vertical ---------- */
+
+/* botão hamburguer (já mostrado no header) */
+.btn-menu-mobile {
+  display: none;           /* será mostrado via @media */
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2100;
+}
+
+/* menu mobile (escondido por padrão) */
+.menu-mobile {
+  display: none;                         /* aparece quando .ativo */
+  background-color: rgba(0,0,0,0.92);
+  backdrop-filter: blur(6px);
+  position: fixed;                       /* fixed para ocupar a tela inteira */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+/* força a UL do menu mobile ficar em coluna (sobrescreve header nav ul) */
+.menu-mobile ul {
+  display: flex;             /* aqui usamos flex, mas em coluna */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 22px;
+  padding: 110px 20px 20px;  /* afasta do topo (logo / botão) */
+  margin: 0;
+  list-style: none;
+}
+
+/* itens e links */
+.menu-mobile li {
+  width: 100%;
+  margin-left: 30px;
+}
+
+.menu-mobile a {
+  display: block;
+  padding: 12px 8px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.menu-mobile a:hover {
+    background-color: #00000078;
+  color: #ff0000ce;
+}
+
+/* ativa o menu */
+.menu-mobile.ativo {
+  display: block;
+}
+
+/* Responsivo: mostra botão e esconda menu-desktop */
+@media (max-width: 1030px) {
+  .menu-desktop {
+    display: none !important; /* garante esconder o menu desktop no mobile */
+  }
+
+  .btn-menu-mobile {
+    display: block;
+  }
+}
